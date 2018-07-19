@@ -1,0 +1,379 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.2-SNAPSHOT), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "undefined" ],
+    "baseIris" : [ "http://purl.org/adaptcentre/ontologies/GDPRtEXT", "http://purl.org/adaptcentre/openscience/ontologies/gdprov", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/2006/time", "http://openscience.adaptcentre.ie/ontologies/privacypolicy" ],
+    "title" : {
+      "undefined" : "Ontology Design Pattern for Personal Data in Privacy Policies"
+    },
+    "iri" : "http://openscience.adaptcentre.ie/ontologies/privacypolicy#",
+    "comments" : {
+      "undefined" : "The ontology design pattern is useful for depicting information regarding personal data in privacy policies."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2018-05-30",
+        "type" : "label"
+      }, {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2018-07-20",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "undefined",
+        "value" : "Privacy laws such as the General Data Protection Regulation (GDPR) specify several obligations involving personal data. A privacy policy is a document that provides information for legal compliance on how personal data is collected, used, stored, and shared, which is essential for understanding their privacy implications. Approaches such as the UsablePrivacy project that extract information from the text of the privacy policy need to structure it in a manner suitable for machine processing. Semantic web has been proven to be suitable to represent this knowledge as a set of queryable concepts and relationships. However, there is a large overlap between different projects and approaches targeting the privacy policy that does not take advantage of the significant similarity of its underlying information. \n\nThis ontology design pattern is aimed to aid these efforts in representing and modelling information related to personal data within a privacy policy. The pattern will assist the existing ecosystem of machine-based approaches for interpretation and visualisation of privacy policies by providing a common structured representation to ease modelling and sharing of related information.",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Ontology Design Pattern for Personal Data in Privacy Policies",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "metrics" : {
+    "classCount" : 8,
+    "objectPropertyCount" : 9,
+    "datatypePropertyCount" : 1,
+    "individualCount" : 0
+  },
+  "class" : [ {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataSharingStep",
+    "baseIri" : "http://purl.org/adaptcentre/openscience/ontologies/gdprov",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/adaptcentre/openscience/ontologies/GDPRtEXT#ShareDataWithThirdParty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DataSharingStep"
+    },
+    "comment" : {
+      "undefined" : "Data Sharing Step"
+    },
+    "attributes" : [ "external" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://purl.org/adaptcentre/ontologies/GDPRtEXT#LawfulBasisForProcessing",
+    "baseIri" : "http://purl.org/adaptcentre/ontologies/GDPRtEXT",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LawfulBasisForProcessing",
+      "undefined" : "Lawful Basis"
+    },
+    "comment" : {
+      "undefined" : "This provides the basis for lawful processing of personal data."
+    },
+    "attributes" : [ "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://purl.org/adaptcentre/openscience/ontologies/gdprov#PersonalData",
+    "baseIri" : "http://purl.org/adaptcentre/openscience/ontologies/gdprov",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/adaptcentre/openscience/ontologies/GDPRtEXT#PersonalData",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PersonalData",
+      "undefined" : "PersonalData"
+    },
+    "comment" : {
+      "undefined" : "PersonalData is any data pertaining to the user which can contain personally identifiable information or a data set generated by the system using personally identifiable information acquired through direct or indirect means"
+    },
+    "attributes" : [ "external" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://purl.org/adaptcentre/openscience/ontologies/gdprov#Process",
+    "baseIri" : "http://purl.org/adaptcentre/openscience/ontologies/gdprov",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Process",
+      "undefined" : "Process"
+    },
+    "comment" : {
+      "undefined" : "A Process describes a 'Plan' of action for carrying out a particular activity that uses or is related to Data or Consent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataCollectionStep",
+    "baseIri" : "http://purl.org/adaptcentre/openscience/ontologies/gdprov",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/adaptcentre/openscience/ontologies/GDPRtEXT#CollectionOfPersonalData",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DataCollectionStep",
+      "undefined" : "Data Collection Step"
+    },
+    "comment" : {
+      "undefined" : "DataCollectionStep collects data from the user"
+    },
+    "attributes" : [ "external" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#duration",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "15",
+    "label" : {
+      "IRI-based" : "duration"
+    }
+  }, {
+    "iri" : "http://purl.org/adaptcentre/ontologies/GDPRtEXT#CollectionMechanism",
+    "baseIri" : "http://purl.org/adaptcentre/ontologies/GDPRtEXT",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CollectionMechanism",
+      "undefined" : "Collection Mechanism"
+    },
+    "comment" : {
+      "undefined" : "The mechanism through which personal data is collected"
+    },
+    "attributes" : [ "external" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Agent",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Agent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://www.w3.org/2006/time#Duration",
+    "baseIri" : "http://www.w3.org/2006/time",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Duration",
+      "undefined" : "Duration"
+    },
+    "comment" : {
+      "undefined" : "Duration of a temporal extent expressed as a decimal number scaled by a temporal unit"
+    },
+    "attributes" : [ "external" ],
+    "id" : "10"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "4",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "7",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "11",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://purl.org/adaptcentre/openscience/ontologies/gdprov#hasLegalBasis",
+    "baseIri" : "http://purl.org/adaptcentre/openscience/ontologies/gdprov",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasLegalBasis",
+      "undefined" : "hasLegalBasis"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "specifies legal basis for processing"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://purl.org/adaptcentre/openscience/ontologies/gdprov#hasCollectionMechanism",
+    "baseIri" : "http://purl.org/adaptcentre/openscience/ontologies/gdprov",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "hasCollectionMechanism",
+      "undefined" : "hasCollectionMechanism"
+    },
+    "domain" : "5",
+    "comment" : {
+      "undefined" : "specifies collection mechanism used for collecting data"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://purl.org/adaptcentre/openscience/ontologies/gdprov#usesData",
+    "baseIri" : "http://purl.org/adaptcentre/openscience/ontologies/gdprov",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "usesData",
+      "undefined" : "usesData"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "links step with data used"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "7"
+  }, {
+    "iri" : "http://www.w3.org/2006/time#hasDuration",
+    "baseIri" : "http://www.w3.org/2006/time",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "hasDuration",
+      "undefined" : "hasDuration"
+    },
+    "domain" : "8",
+    "comment" : {
+      "undefined" : "Duration of a temporal entity, expressed as a scaled value or nominal value"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesDataWith",
+    "baseIri" : "http://purl.org/adaptcentre/openscience/ontologies/gdprov",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "sharesDataWith",
+      "undefined" : "sharesDataWith"
+    },
+    "domain" : "3",
+    "comment" : {
+      "undefined" : "shares data with Agent"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://purl.org/adaptcentre/openscience/ontologies/gdprov#collectsDataFromAgent",
+    "baseIri" : "http://purl.org/adaptcentre/openscience/ontologies/gdprov",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "collectsDataFromAgent",
+      "undefined" : "collectsDataFromAgent"
+    },
+    "domain" : "5",
+    "comment" : {
+      "undefined" : "denotes Agent from which data was collected"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesDataForProcess",
+    "baseIri" : "http://purl.org/adaptcentre/openscience/ontologies/gdprov",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "sharesDataForProcess",
+      "undefined" : "sharesDataForProcess"
+    },
+    "domain" : "3",
+    "comment" : {
+      "undefined" : "denotes the process/activity/purpose for which the data is shared"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "14"
+  }, {
+    "iri" : "http://openscience.adaptcentre.ie/ontologies/privacypolicy#retainedFor",
+    "baseIri" : "http://openscience.adaptcentre.ie/ontologies/privacypolicy",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "retainedFor"
+    },
+    "domain" : "8",
+    "attributes" : [ "datatype" ],
+    "id" : "16"
+  }, {
+    "iri" : "http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesData",
+    "baseIri" : "http://purl.org/adaptcentre/openscience/ontologies/gdprov",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "sharesData",
+      "undefined" : "sharesData"
+    },
+    "domain" : "3",
+    "comment" : {
+      "undefined" : "Indicates sharing of Data through a DataStep"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://purl.org/adaptcentre/openscience/ontologies/gdprov#collectsData",
+    "baseIri" : "http://purl.org/adaptcentre/openscience/ontologies/gdprov",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "collectsData",
+      "undefined" : "collectsData"
+    },
+    "domain" : "5",
+    "comment" : {
+      "undefined" : "Links data obtained (collected) by the step/activity that acquired it"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "18"
+  } ]
+}

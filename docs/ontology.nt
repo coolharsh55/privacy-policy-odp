@@ -1,0 +1,190 @@
+<http://openscience.adaptcentre.ie/ontologies/privacypolicy#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://openscience.adaptcentre.ie/ontologies/privacypolicy#> <http://purl.org/dc/terms/abstract> "Privacy laws such as the General Data Protection Regulation (GDPR) specify several obligations involving personal data. A privacy policy is a document that provides information for legal compliance on how personal data is collected, used, stored, and shared, which is essential for understanding their privacy implications. Approaches such as the UsablePrivacy project that extract information from the text of the privacy policy need to structure it in a manner suitable for machine processing. Semantic web has been proven to be suitable to represent this knowledge as a set of queryable concepts and relationships. However, there is a large overlap between different projects and approaches targeting the privacy policy that does not take advantage of the significant similarity of its underlying information. \n\nThis ontology design pattern is aimed to aid these efforts in representing and modelling information related to personal data within a privacy policy. The pattern will assist the existing ecosystem of machine-based approaches for interpretation and visualisation of privacy policies by providing a common structured representation to ease modelling and sharing of related information." .
+<http://openscience.adaptcentre.ie/ontologies/privacypolicy#> <http://purl.org/dc/terms/created> "2018-05-30" .
+<http://openscience.adaptcentre.ie/ontologies/privacypolicy#> <http://purl.org/dc/terms/created> "2018-07-20" .
+<http://openscience.adaptcentre.ie/ontologies/privacypolicy#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<http://openscience.adaptcentre.ie/ontologies/privacypolicy#> <http://purl.org/dc/terms/title> "Ontology Design Pattern for Personal Data in Privacy Policies" .
+<http://openscience.adaptcentre.ie/ontologies/privacypolicy#> <http://www.w3.org/2000/01/rdf-schema#comment> "The ontology design pattern is useful for depicting information regarding personal data in privacy policies." .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#duration
+<http://www.w3.org/2001/XMLSchema#duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/adaptcentre/openscience/ontologies/gdprov#collectsData
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#collectsData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#collectsData> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataCollectionStep> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#collectsData> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/adaptcentre/openscience/ontologies/gdprov#PersonalData> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#collectsData> <http://www.w3.org/2000/01/rdf-schema#comment> "Links data obtained (collected) by the step/activity that acquired it" .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#collectsData> <http://www.w3.org/2000/01/rdf-schema#label> "collectsData" .
+# 
+# http://purl.org/adaptcentre/openscience/ontologies/gdprov#collectsDataFromAgent
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#collectsDataFromAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#collectsDataFromAgent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataCollectionStep> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#collectsDataFromAgent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/prov#Agent> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#collectsDataFromAgent> <http://www.w3.org/2000/01/rdf-schema#comment> "denotes Agent from which data was collected" .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#collectsDataFromAgent> <http://www.w3.org/2000/01/rdf-schema#label> "collectsDataFromAgent" .
+# 
+# http://purl.org/adaptcentre/openscience/ontologies/gdprov#hasCollectionMechanism
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#hasCollectionMechanism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#hasCollectionMechanism> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataCollectionStep> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#hasCollectionMechanism> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/adaptcentre/ontologies/GDPRtEXT#CollectionMechanism> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#hasCollectionMechanism> <http://www.w3.org/2000/01/rdf-schema#comment> "specifies collection mechanism used for collecting data" .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#hasCollectionMechanism> <http://www.w3.org/2000/01/rdf-schema#label> "hasCollectionMechanism" .
+# 
+# http://purl.org/adaptcentre/openscience/ontologies/gdprov#hasLegalBasis
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#hasLegalBasis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#hasLegalBasis> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/adaptcentre/openscience/ontologies/gdprov#Process> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#hasLegalBasis> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/adaptcentre/ontologies/GDPRtEXT#LawfulBasisForProcessing> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#hasLegalBasis> <http://www.w3.org/2000/01/rdf-schema#comment> "specifies legal basis for processing" .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#hasLegalBasis> <http://www.w3.org/2000/01/rdf-schema#label> "hasLegalBasis" .
+# 
+# http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesData
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesData> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataSharingStep> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesData> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/adaptcentre/openscience/ontologies/gdprov#PersonalData> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesData> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates sharing of Data through a DataStep" .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesData> <http://www.w3.org/2000/01/rdf-schema#label> "sharesData" .
+# 
+# http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesDataForProcess
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesDataForProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesDataForProcess> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataSharingStep> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesDataForProcess> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/adaptcentre/openscience/ontologies/gdprov#Process> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesDataForProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "denotes the process/activity/purpose for which the data is shared" .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesDataForProcess> <http://www.w3.org/2000/01/rdf-schema#label> "sharesDataForProcess" .
+# 
+# http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesDataWith
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesDataWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesDataWith> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataSharingStep> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesDataWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/prov#Agent> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesDataWith> <http://www.w3.org/2000/01/rdf-schema#comment> "shares data with Agent" .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesDataWith> <http://www.w3.org/2000/01/rdf-schema#label> "sharesDataWith" .
+# 
+# http://purl.org/adaptcentre/openscience/ontologies/gdprov#usesData
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#usesData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#usesData> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/adaptcentre/openscience/ontologies/gdprov#Process> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#usesData> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/adaptcentre/openscience/ontologies/gdprov#PersonalData> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#usesData> <http://www.w3.org/2000/01/rdf-schema#comment> "links step with data used" .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#usesData> <http://www.w3.org/2000/01/rdf-schema#label> "usesData" .
+# 
+# http://www.w3.org/2006/time#hasDuration
+<http://www.w3.org/2006/time#hasDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2006/time#hasDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/adaptcentre/openscience/ontologies/gdprov#PersonalData> .
+<http://www.w3.org/2006/time#hasDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#Duration> .
+<http://www.w3.org/2006/time#hasDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "Duration of a temporal entity, expressed as a scaled value or nominal value" .
+<http://www.w3.org/2006/time#hasDuration> <http://www.w3.org/2000/01/rdf-schema#label> "hasDuration" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://openscience.adaptcentre.ie/ontologies/privacypolicy#retainedFor
+<http://openscience.adaptcentre.ie/ontologies/privacypolicy#retainedFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openscience.adaptcentre.ie/ontologies/privacypolicy#retainedFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/adaptcentre/openscience/ontologies/gdprov#PersonalData> .
+<http://openscience.adaptcentre.ie/ontologies/privacypolicy#retainedFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#duration> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/adaptcentre/ontologies/GDPRtEXT#CollectionMechanism
+<http://purl.org/adaptcentre/ontologies/GDPRtEXT#CollectionMechanism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/adaptcentre/ontologies/GDPRtEXT#CollectionMechanism> <http://www.w3.org/2000/01/rdf-schema#comment> "The mechanism through which personal data is collected" .
+<http://purl.org/adaptcentre/ontologies/GDPRtEXT#CollectionMechanism> <http://www.w3.org/2000/01/rdf-schema#label> "Collection Mechanism" .
+# 
+# http://purl.org/adaptcentre/ontologies/GDPRtEXT#LawfulBasisForProcessing
+<http://purl.org/adaptcentre/ontologies/GDPRtEXT#LawfulBasisForProcessing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/adaptcentre/ontologies/GDPRtEXT#LawfulBasisForProcessing> <http://www.w3.org/2000/01/rdf-schema#comment> "This provides the basis for lawful processing of personal data." .
+<http://purl.org/adaptcentre/ontologies/GDPRtEXT#LawfulBasisForProcessing> <http://www.w3.org/2000/01/rdf-schema#label> "Lawful Basis" .
+# 
+# http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataCollectionStep
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataCollectionStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataCollectionStep> <http://www.w3.org/2000/01/rdf-schema#comment> "DataCollectionStep collects data from the user" .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataCollectionStep> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/adaptcentre/openscience/ontologies/GDPRtEXT#CollectionOfPersonalData> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataCollectionStep> <http://www.w3.org/2000/01/rdf-schema#label> "Data Collection Step" .
+# 
+# http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataSharingStep
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataSharingStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataSharingStep> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesDataWith> .
+_:genid1 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid1 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/ns/prov#Agent> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataSharingStep> <http://www.w3.org/2000/01/rdf-schema#comment> "Data Sharing Step" .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataSharingStep> <http://www.w3.org/2000/01/rdf-schema#comment> "DataSharingStep shares data with another agent/organisation. These may be internal or external entities." .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataSharingStep> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/adaptcentre/openscience/ontologies/GDPRtEXT#ShareDataWithThirdParty> .
+# 
+# http://purl.org/adaptcentre/openscience/ontologies/gdprov#PersonalData
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#PersonalData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#PersonalData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/adaptcentre/openscience/ontologies/gdprov#hasLegalBasis> .
+_:genid2 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/adaptcentre/ontologies/GDPRtEXT#LawfulBasisForProcessing> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#PersonalData> <http://www.w3.org/2000/01/rdf-schema#comment> "PersonalData is any data pertaining to the user which can contain personally identifiable information or a data set generated by the system using personally identifiable information acquired through direct or indirect means" .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#PersonalData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/adaptcentre/openscience/ontologies/GDPRtEXT#PersonalData> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#PersonalData> <http://www.w3.org/2000/01/rdf-schema#label> "PersonalData" .
+# 
+# http://purl.org/adaptcentre/openscience/ontologies/gdprov#Process
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#Process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#Process> <http://www.w3.org/2000/01/rdf-schema#comment> "A Process describes a 'Plan' of action for carrying out a particular activity that uses or is related to Data or Consent" .
+<http://purl.org/adaptcentre/openscience/ontologies/gdprov#Process> <http://www.w3.org/2000/01/rdf-schema#label> "Process" .
+# 
+# http://www.w3.org/2006/time#Duration
+<http://www.w3.org/2006/time#Duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2006/time#Duration> <http://www.w3.org/2000/01/rdf-schema#comment> "Duration of a temporal extent expressed as a decimal number scaled by a temporal unit" .
+<http://www.w3.org/2006/time#Duration> <http://www.w3.org/2000/01/rdf-schema#label> "Duration" .
+# 
+# http://www.w3.org/ns/prov#Agent
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/

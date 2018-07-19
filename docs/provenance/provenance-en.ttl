@@ -1,0 +1,12 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+<..\index-en.html> a prov:Entity;
+	 dc:title "Ontology Design Pattern for Personal Data in Privacy Policies";
+	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo <http://purl.org/adaptcentre/people/HJP>;
+	 dc:creator <http://purl.org/adaptcentre/people/HJP>;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:wasGeneratedAt "2018-07-19";
+.
+:agent0 a prov:Agent; foaf:name "Harshvardhan J. Pandit".

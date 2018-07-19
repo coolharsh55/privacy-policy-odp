@@ -1,0 +1,84 @@
+<h2 id="desc" class="list">GDPR Provenance Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<h3 id="personal-data" class="unnumbered unnumbered">Personal Data</h3>
+<p><em>PersonalData</em> represents an instance of personal data, such as an <em>email address</em>, which is described in the privacy policy. It is defined as an instance of <em>gdprov:PersonalData</em>. Privacy policies often group related instances of personal data in broader categories such as <em>contact information</em> for representing <em>email</em> and <em>phone number</em>. To represent such a grouping in the pattern, the category can be represented as a subclass of <em>PersonalData</em> using <em>rdfs:subClassOf</em>, with its instances representing individual personal data items. In this case, <em>contact information</em> would be a subclass of <em>gdprov:PersonalData</em> with <em>email</em> and <em>phone number</em> being its instances. <br /><span class="math display"><em>P</em><em>e</em><em>r</em><em>s</em><em>o</em><em>n</em><em>a</em><em>l</em><em>D</em><em>a</em><em>t</em><em>a</em><em>C</em><em>a</em><em>t</em><em>e</em><em>g</em><em>o</em><em>r</em><em>y</em> ⊑ <em>P</em><em>e</em><em>r</em><em>s</em><em>o</em><em>n</em><em>a</em><em>l</em><em>D</em><em>a</em><em>t</em><em>a</em></span><br /></p>
+<h3 id="data-collection" class="unnumbered unnumbered">Data Collection</h3>
+<p>Data is collected through a <em>gdprov:DataCollectionStep</em>, and is represented using the property <em>gdprov:collectsData</em>. The data provider is represented using <em>prov:Agent</em> through the property <em>gdprov:collectsDataFromAgent</em>.</p>
+<p>Apart from the source, the privacy policy may also mention the particular collection mechanism used for data collection. This is represented using the <em>gdprov:hasCollectionMechanism</em> property, where the collection mechanism is represented by a suitable subclass of <em>gdprtext:CollectionMechanism</em>, such as <em>gdprtext:GivenByUser</em> or <em>gdprtext:AutomatedCollection</em>. <br /><span class="math display"><em>D</em><em>a</em><em>t</em><em>a</em><em>C</em><em>o</em><em>l</em><em>l</em><em>e</em><em>c</em><em>t</em><em>i</em><em>o</em><em>n</em><em>S</em><em>t</em><em>e</em><em>p</em> ⊑ ≥​1<em>c</em><em>o</em><em>l</em><em>l</em><em>e</em><em>c</em><em>t</em><em>s</em><em>D</em><em>a</em><em>t</em><em>a</em>.<em>P</em><em>e</em><em>r</em><em>s</em><em>o</em><em>n</em><em>a</em><em>l</em><em>D</em><em>a</em><em>t</em><em>a</em></span><br /> <br /><span class="math display"><em>D</em><em>a</em><em>t</em><em>a</em><em>C</em><em>o</em><em>l</em><em>l</em><em>e</em><em>c</em><em>t</em><em>i</em><em>o</em><em>n</em><em>S</em><em>t</em><em>e</em><em>p</em> ⊑ ≥​1<em>c</em><em>o</em><em>l</em><em>l</em><em>e</em><em>c</em><em>t</em><em>s</em><em>D</em><em>a</em><em>t</em><em>a</em><em>F</em><em>r</em><em>o</em><em>m</em><em>A</em><em>g</em><em>e</em><em>n</em><em>t</em>.<em>A</em><em>g</em><em>e</em><em>n</em><em>t</em></span><br /> <br /><span class="math display"><em>P</em><em>e</em><em>r</em><em>s</em><em>o</em><em>n</em><em>a</em><em>l</em><em>D</em><em>a</em><em>t</em><em>a</em> ⊑ ∀<em>h</em><em>a</em><em>s</em><em>C</em><em>o</em><em>l</em><em>l</em><em>e</em><em>c</em><em>t</em><em>i</em><em>o</em><em>n</em><em>M</em><em>e</em><em>c</em><em>h</em><em>a</em><em>n</em><em>i</em><em>s</em><em>m</em>.<em>C</em><em>o</em><em>l</em><em>l</em><em>e</em><em>c</em><em>t</em><em>i</em><em>o</em><em>n</em><em>M</em><em>e</em><em>c</em><em>h</em><em>a</em><em>n</em><em>i</em><em>s</em><em>m</em></span><br /></p>
+<h3 id="data-retention" class="unnumbered unnumbered">Data Retention</h3>
+<p>The retention of personal data informs how long it would be stored for. This is represented using the Time Ontology in OWL<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a>, which is the W3C recommendation for describing temporal concepts. The retention period is represented using the property <em>time:hasDuration</em> with the range being an instance of <em>time:Duration</em>. This information is arbitrary and may be missing or in an un-representable format within the privacy policy such as “retained for as long as necessary” where the information is difficult to represent. <br /><span class="math display"><em>P</em><em>e</em><em>r</em><em>s</em><em>o</em><em>n</em><em>a</em><em>l</em><em>D</em><em>a</em><em>t</em><em>a</em> ⊑ ∀<em>h</em><em>a</em><em>s</em><em>D</em><em>u</em><em>r</em><em>a</em><em>t</em><em>i</em><em>o</em><em>n</em>.<em>D</em><em>u</em><em>r</em><em>a</em><em>t</em><em>i</em><em>o</em><em>n</em></span><br /></p>
+<h3 id="data-usage-processing" class="unnumbered unnumbered">Data Usage &amp; Processing</h3>
+<p>Data Usage, also termed as Processing, is the use of personal data for some purpose as specified within the privacy policy. This can vary in terms of granularity from a comparatively simple step such as sending an email to a more abstract process such as marketing which encompasses several steps and processes. The pattern therefore uses <em>gdprov:Process</em>, which is a subclass of <em>p-plan:Plan</em>, to define a process which can contain one or more steps and processes. The property <em>gdprov:usesData</em> is used to represent the use of personal data within a process. <br /><span class="math display"><em>P</em><em>r</em><em>o</em><em>c</em><em>e</em><em>s</em><em>s</em> ⊑ ≥​1<em>u</em><em>s</em><em>e</em><em>s</em><em>D</em><em>a</em><em>t</em><em>a</em>.<em>P</em><em>e</em><em>r</em><em>s</em><em>o</em><em>n</em><em>a</em><em>l</em><em>D</em><em>a</em><em>t</em><em>a</em></span><br /></p>
+<h3 id="legal-basis-for-data-usage" class="unnumbered unnumbered">Legal Basis for Data Usage</h3>
+<p>Every use of personal data within a process must have a legal basis under the GDPR. Examples of such legal basis defined within GDPRtEXT include consent, legitimate interest, compliance with the law, and performance of contract. To represent this, the pattern uses the property <em>gdprov:hasLegalBasis</em> with the range <em>gdprtext:LawfulBasisForProcessing</em>. Since every data use must have at least one legal basis, this provides the axiom: <br /><span class="math display"><em>P</em><em>r</em><em>o</em><em>c</em><em>e</em><em>s</em><em>s</em> ⊑ ≥​1<em>h</em><em>a</em><em>s</em><em>L</em><em>e</em><em>g</em><em>a</em><em>l</em><em>B</em><em>a</em><em>s</em><em>i</em><em>s</em>.<em>L</em><em>a</em><em>w</em><em>f</em><em>u</em><em>l</em><em>B</em><em>a</em><em>s</em><em>i</em><em>s</em><em>F</em><em>o</em><em>r</em><em>P</em><em>r</em><em>o</em><em>c</em><em>e</em><em>s</em><em>s</em><em>i</em><em>n</em><em>g</em></span><br /></p>
+<h3 id="data-sharing" class="unnumbered unnumbered">Data Sharing</h3>
+<p>The sharing of data involves the entity the data is shared with, the purposes for sharing, and their legal basis. This is represented within the pattern through the use of <em>gdprov:DataSharingStep</em> and the property <em>gdprov:sharesData</em>. The entity the data is shared with is represented using the <em>gdprov:sharesDataWith</em> property with the domain as <em>gdprov:DataSharingStep</em> and the range as a type of <em>gdprov:Agent</em>, such as another Data Controller, Data Processor, or an Authority. The purpose of sharing is represented using <em>gdprov:Process</em> and the property <em>gdprov:sharesDataForProcess</em> to model the data being used in that process after sharing. The legal basis of processes for which the data is shared is represented using <em>gdprov:hasLegalBasis</em> as specified earlier. Since it is mandatory to inform who the data is being shared with, along with its intended purposes, and the specific legal obligation, we have the following axioms: <br /><span class="math display"><em>D</em><em>a</em><em>t</em><em>a</em><em>S</em><em>h</em><em>a</em><em>r</em><em>i</em><em>n</em><em>g</em><em>S</em><em>t</em><em>e</em><em>p</em> ⊑ ≥​1<em>s</em><em>h</em><em>a</em><em>r</em><em>e</em><em>s</em><em>D</em><em>a</em><em>t</em><em>a</em>.<em>P</em><em>e</em><em>r</em><em>s</em><em>o</em><em>n</em><em>a</em><em>l</em><em>D</em><em>a</em><em>t</em><em>a</em></span><br /> <br /><span class="math display"><em>D</em><em>a</em><em>t</em><em>a</em><em>S</em><em>h</em><em>a</em><em>r</em><em>i</em><em>n</em><em>g</em><em>S</em><em>t</em><em>e</em><em>p</em> ⊑ ≥​1<em>s</em><em>h</em><em>a</em><em>r</em><em>e</em><em>s</em><em>D</em><em>a</em><em>t</em><em>a</em><em>W</em><em>i</em><em>t</em><em>h</em>.<em>A</em><em>g</em><em>e</em><em>n</em><em>t</em></span><br /> <br /><span class="math display"><em>D</em><em>a</em><em>t</em><em>a</em><em>S</em><em>h</em><em>a</em><em>r</em><em>i</em><em>n</em><em>g</em><em>S</em><em>t</em><em>e</em><em>p</em> ⊑ ≥​1<em>s</em><em>h</em><em>a</em><em>r</em><em>e</em><em>s</em><em>D</em><em>a</em><em>t</em><em>a</em><em>F</em><em>o</em><em>r</em>.<em>P</em><em>r</em><em>o</em><em>c</em><em>e</em><em>s</em><em>s</em></span><br /></p>
+
+<h2 id="sec:example" class="list">Example Use-Case<span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>We present here an example use-case of the pattern for depicting personal data from Airbnb Ireland’s privacy policy. The use-case was chosen for its generality in terms of being common to other privacy policies as well as ease of understanding for users.</p>
+<p>The use-case concerns the ‘email address’ specified as personal data within the privacy policy, which is provided by the user. It is used to “provide, improve, and develop platform services”, which is specified as a process with the legal basis of legitimate interest. It is shared with the ‘Payments Controller’ entity for ‘Identity Verification’ process which has a legal basis of ’contract fulfilment’.</p>
+<p>The example use-case is illustrated in the figure below using Graffoo <span class="citation" data-cites="graffoo"></span> and shows the classes, properties, and instances. The corresponding code is presented below using the Turtle<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a> notation for RDF. The answers to the competency questions corresponding to the use-case are as follows:</p>
+<ol>
+<li><p>What personal data is collected: Email Address</p></li>
+<li><p>Does the data have a category: Account Information</p></li>
+<li><p>What was its source: User</p></li>
+<li><p>How is it collected: Given by user</p></li>
+<li><p>What is it used for: Platform Services, Payments</p></li>
+<li><p>How long is it retained for: indefinitely (no end duration)</p></li>
+<li><p>Who is it shared with: Payments Controller</p></li>
+<li><p>What is the legal basis: Legitimate Interest, Contract</p></li>
+<li><p>What processes/purposes was the data shared for: Identity Verification</p></li>
+<li><p>What is the legal type of third party: Data Controller</p></li>
+</ol>
+
+<img src="images/usecase.png" style="max-width:800px;">
+
+<pre><code>
+@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xml: &lt;http://www.w3.org/XML/1998/namespace&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+@prefix gdprov: &lt;http://purl.org/adaptcentre/openscience/ontologies/gdprov#&gt; .
+@prefix gdprtext: &lt;http://purl.org/adaptcentre/openscience/ontologies/GDPRtEXT#&gt; .
+@prefix : &lt;http://example.com/personaldata#&gt; .
+
+:PaymentProcess a gdprov:DataSharingStep ;
+    rdfs:label &quot;Payment Process&quot;^^xsd:string ;
+    gdprov:sharesData :EmailAddress ;
+    gdprov:sharesDataForProcess :IdentityVerification ;
+    gdprov:sharesDataWith :PaymentsController .
+
+:PlatformServices a gdprov:Process ;
+    rdfs:label &quot;Provide, Improve, and Develop Platform&quot;^^xsd:string ;
+    gdprov:hasLegalBasis gdprtext:LegitimateInterest ;
+    gdprov:usesData :EmailAddress .
+
+:Registration a gdprov:DataCollectionStep ;
+    rdfs:label &quot;Registration for new users&quot;^^xsd:string ;
+    gdprov:collectsData :EmailAddress ;
+    gdprov:collectsDataFromAgent :User ;
+    gdprov:hasCollectionMechanism gdprtext:GivenByUser .
+
+:AccountInformation a rdfs:Class, owl:Class ;
+    rdfs:label &quot;Account Information of an User&quot;^^xsd:string ;
+    rdfs:subClassOf gdprov:PersonalData .
+
+:IdentityVerification a gdprov:Process ;
+    rdfs:label &quot;Identity Verification&quot;^^xsd:string ;
+    gdprov:hasLegalBasis gdprtext:Contract ;
+    gdprov:usesData :EmailAddress .
+
+:PaymentsController a gdprov:Controller,
+        prov:Agent ;
+    rdfs:label &quot;Payments Controller&quot;^^xsd:string .
+
+:User a gdprov:DataSubject,
+        prov:Agent ;
+    rdfs:label &quot;User of Service&quot;^^xsd:string .
+
+:EmailAddress a :AccountInformation,
+        :PersonalData ;
+    rdfs:label &quot;Email Address&quot;^^xsd:string .
+</code></pre>

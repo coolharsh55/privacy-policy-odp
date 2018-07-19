@@ -1,0 +1,340 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://openscience.adaptcentre.ie/ontologies/privacypolicy#"
+     xml:base="http://openscience.adaptcentre.ie/ontologies/privacypolicy"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://openscience.adaptcentre.ie/ontologies/privacypolicy#">
+        <terms:abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Privacy laws such as the General Data Protection Regulation (GDPR) specify several obligations involving personal data. A privacy policy is a document that provides information for legal compliance on how personal data is collected, used, stored, and shared, which is essential for understanding their privacy implications. Approaches such as the UsablePrivacy project that extract information from the text of the privacy policy need to structure it in a manner suitable for machine processing. Semantic web has been proven to be suitable to represent this knowledge as a set of queryable concepts and relationships. However, there is a large overlap between different projects and approaches targeting the privacy policy that does not take advantage of the significant similarity of its underlying information. 
+
+This ontology design pattern is aimed to aid these efforts in representing and modelling information related to personal data within a privacy policy. The pattern will assist the existing ecosystem of machine-based approaches for interpretation and visualisation of privacy policies by providing a common structured representation to ease modelling and sharing of related information.</terms:abstract>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-30</terms:created>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-07-20</terms:created>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontology Design Pattern for Personal Data in Privacy Policies</terms:title>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The ontology design pattern is useful for depicting information regarding personal data in privacy policies.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/abstract -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#duration -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#duration"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/adaptcentre/openscience/ontologies/gdprov#collectsData -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/adaptcentre/openscience/ontologies/gdprov#collectsData">
+        <rdfs:domain rdf:resource="http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataCollectionStep"/>
+        <rdfs:range rdf:resource="http://purl.org/adaptcentre/openscience/ontologies/gdprov#PersonalData"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Links data obtained (collected) by the step/activity that acquired it</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collectsData</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/adaptcentre/openscience/ontologies/gdprov#collectsDataFromAgent -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/adaptcentre/openscience/ontologies/gdprov#collectsDataFromAgent">
+        <rdfs:domain rdf:resource="http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataCollectionStep"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">denotes Agent from which data was collected</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collectsDataFromAgent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/adaptcentre/openscience/ontologies/gdprov#hasCollectionMechanism -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/adaptcentre/openscience/ontologies/gdprov#hasCollectionMechanism">
+        <rdfs:domain rdf:resource="http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataCollectionStep"/>
+        <rdfs:range rdf:resource="http://purl.org/adaptcentre/ontologies/GDPRtEXT#CollectionMechanism"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">specifies collection mechanism used for collecting data</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasCollectionMechanism</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/adaptcentre/openscience/ontologies/gdprov#hasLegalBasis -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/adaptcentre/openscience/ontologies/gdprov#hasLegalBasis">
+        <rdfs:domain rdf:resource="http://purl.org/adaptcentre/openscience/ontologies/gdprov#Process"/>
+        <rdfs:range rdf:resource="http://purl.org/adaptcentre/ontologies/GDPRtEXT#LawfulBasisForProcessing"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">specifies legal basis for processing</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasLegalBasis</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesData -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesData">
+        <rdfs:domain rdf:resource="http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataSharingStep"/>
+        <rdfs:range rdf:resource="http://purl.org/adaptcentre/openscience/ontologies/gdprov#PersonalData"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indicates sharing of Data through a DataStep</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sharesData</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesDataForProcess -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesDataForProcess">
+        <rdfs:domain rdf:resource="http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataSharingStep"/>
+        <rdfs:range rdf:resource="http://purl.org/adaptcentre/openscience/ontologies/gdprov#Process"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">denotes the process/activity/purpose for which the data is shared</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sharesDataForProcess</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesDataWith -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesDataWith">
+        <rdfs:domain rdf:resource="http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataSharingStep"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shares data with Agent</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sharesDataWith</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/adaptcentre/openscience/ontologies/gdprov#usesData -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/adaptcentre/openscience/ontologies/gdprov#usesData">
+        <rdfs:domain rdf:resource="http://purl.org/adaptcentre/openscience/ontologies/gdprov#Process"/>
+        <rdfs:range rdf:resource="http://purl.org/adaptcentre/openscience/ontologies/gdprov#PersonalData"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">links step with data used</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">usesData</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasDuration -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasDuration">
+        <rdfs:domain rdf:resource="http://purl.org/adaptcentre/openscience/ontologies/gdprov#PersonalData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#Duration"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duration of a temporal entity, expressed as a scaled value or nominal value</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasDuration</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://openscience.adaptcentre.ie/ontologies/privacypolicy#retainedFor -->
+
+
+    <owl:DatatypeProperty rdf:about="http://openscience.adaptcentre.ie/ontologies/privacypolicy#retainedFor">
+        <rdfs:domain rdf:resource="http://purl.org/adaptcentre/openscience/ontologies/gdprov#PersonalData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#duration"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/adaptcentre/ontologies/GDPRtEXT#CollectionMechanism -->
+
+
+    <owl:Class rdf:about="http://purl.org/adaptcentre/ontologies/GDPRtEXT#CollectionMechanism">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The mechanism through which personal data is collected</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collection Mechanism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/adaptcentre/ontologies/GDPRtEXT#LawfulBasisForProcessing -->
+
+
+    <owl:Class rdf:about="http://purl.org/adaptcentre/ontologies/GDPRtEXT#LawfulBasisForProcessing">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This provides the basis for lawful processing of personal data.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lawful Basis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataCollectionStep -->
+
+
+    <owl:Class rdf:about="http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataCollectionStep">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DataCollectionStep collects data from the user</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/adaptcentre/openscience/ontologies/GDPRtEXT#CollectionOfPersonalData"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Collection Step</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataSharingStep -->
+
+
+    <owl:Class rdf:about="http://purl.org/adaptcentre/openscience/ontologies/gdprov#DataSharingStep">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/adaptcentre/openscience/ontologies/gdprov#sharesDataWith"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Sharing Step</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DataSharingStep shares data with another agent/organisation. These may be internal or external entities.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/adaptcentre/openscience/ontologies/GDPRtEXT#ShareDataWithThirdParty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/adaptcentre/openscience/ontologies/gdprov#PersonalData -->
+
+
+    <owl:Class rdf:about="http://purl.org/adaptcentre/openscience/ontologies/gdprov#PersonalData">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/adaptcentre/openscience/ontologies/gdprov#hasLegalBasis"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/adaptcentre/ontologies/GDPRtEXT#LawfulBasisForProcessing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PersonalData is any data pertaining to the user which can contain personally identifiable information or a data set generated by the system using personally identifiable information acquired through direct or indirect means</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/adaptcentre/openscience/ontologies/GDPRtEXT#PersonalData"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PersonalData</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/adaptcentre/openscience/ontologies/gdprov#Process -->
+
+
+    <owl:Class rdf:about="http://purl.org/adaptcentre/openscience/ontologies/gdprov#Process">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Process describes a &apos;Plan&apos; of action for carrying out a particular activity that uses or is related to Data or Consent</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Duration -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Duration">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duration of a temporal extent expressed as a decimal number scaled by a temporal unit</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Agent -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Agent"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/ -->
+
+

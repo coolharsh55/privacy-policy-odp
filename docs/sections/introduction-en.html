@@ -1,0 +1,52 @@
+<h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<img src="images/privacypolicy3.png" style="max-width:800px;">
+<p>A privacy policy provides disclosure of information regarding the collection, usage, storage, and sharing of personal data as governed by territorial laws <span class="citation" data-cites="wilson_creation_2016"></span>. The privacy policy is most commonly presented as a monolithic text document. It has been repeatedly proven to be difficult to read and understand<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> for the users <span class="citation" data-cites="contissa_claudette_2018 fabian_large-scale_2017 jensen_privacy_2004"></span>. To remedy this, there have been several approaches towards making interpretation of privacy policies easier for end users. ‘Terms of Service; Didn’t Read’<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> is a community driven approach to summarise privacy policies in the interest of user awareness. Some recent approaches use machine-learning to interpret the contents of the privacy policy and to present their analysis to the user in a visual format. This allows the approaches to scale with the ever-increasing and changing nature of services and their privacy policies. Two promising approaches in this area are the the UsablePrivacy project<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> <span class="citation" data-cites="oltramari_privonto:_2018"></span> and the PrivacyGuide project <span class="citation" data-cites="tesfay_i_2018 tesfay_privacyguide:_2018"></span>.</p>
+<p>The privacy policy provides information associated with personal data such as its collection, usage, sharing, and storage along with other information such as the provision of various rights required by law. The General Data Protection Regulation (GDPR) <span class="citation" data-cites="noauthor_regulation_2016"></span>, which is a European law for data protection, requires specification of this information in privacy policies for compliance. This provides commonality with respect to the mandatory information specified by laws which is provided in privacy policies. Machine-processing approaches require this information to be structured in a machine-readable format that can aid in the automation of processes. Approaches that target the same set of information have to deal with the same set of data - in this case the information regarding personal data provided in privacy policies. This commonality of underlying information (within privacy policies) can be represented using a common vocabulary for its expression. This will aid the different approaches through sharing of extracted information from privacy policies, while also making it possible to compare the efficiency of different methods in extracting this information.</p>
+<p>Using a semantic web based approach provides a way to define such knowledge in the form of concepts and relationships with the freedom for them to be expanded and connected based on requirements. The UsablePrivacy project already uses such an approach involving semantic web ontologies to represent its underlying information about the categorisation of sentences within a privacy policy <span class="citation" data-cites="oltramari_privonto:_2018"></span>. In addition to such machine-based approaches, other work involving the information presented within a privacy policy will also benefit from such structuring of information based on semantic web technologies.</p>
+<p>With this as our motivation, we present an ontology design pattern (ODP) for modelling the information related to personal data within a privacy policy. This ODP provides a way to express the personal data and the information associated with it as a set of concepts and relationships which can be incorporated into a larger semantic web ontology.</p>
+<p>In terms of scope, we limit to expressing information related to personal data provided explicitly within a privacy policy. Other relevant information within a privacy policy but not part of the pattern is discussed as future work at the end of this paper. In terms of relevant work, we are not aware of any similar approaches for modelling of information within a privacy policy towards creating an ontology design pattern.</p>
+<p>The ODP is based on an investigation of privacy policies from Airbnb Ireland<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> and Twitter <a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>, with archived copies made available<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a> in case of changes to the policy in future. While we also evaluated other privacy policies for their structure and content, we specify these two as being our primary use-cases for the purpose of this work. An investigation of information within the privacy policy provided by Airbnb Ireland is available online <a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a> but is not part of this paper’s contribution.</p>
+
+<h2 id="sec:questions">Competency Questions</h2>
+<p>The pattern aims to answer the following competency questions:</p>
+<ol>
+<li><p>What personal data is collected? e.g. email</p></li>
+<li><p>Does the data have a category? e.g. contact information</p></li>
+<li><p>What was its source? e.g. user</p></li>
+<li><p>How is it collected? e.g. given by user, automated</p></li>
+<li><p>What is it used for? e.g. creating an account, authentication and verification</p></li>
+<li><p>How long is it retained for? e.g. 90days after account deletion</p></li>
+<li><p>Who is it shared with? e.g. name of partner organisation(s)</p></li>
+<li><p>What is the legal basis? e.g. given consent, legitimate use</p></li>
+<li><p>What processes/purposes was the data shared for? e.g. analytics, marketing</p></li>
+<li><p>What is the legal type of third party? e.g. processor, controller, authority</p></li>
+</ol>
+<p>The pattern does not consider questions related to the provision of GDPR rights. While these questions are relevant, they are directly related to the data subject (or user), and are common to all instances of personal data. They are better represented in the model of the privacy policy rather than as an instance of personal data. We provide them here for brevity, with a further discussion on this provided in the future work section:</p>
+<ol>
+<li><p>How can personal data be rectified or corrected?</p></li>
+<li><p>How can personal data be deleted or removed?</p></li>
+<li><p>How can a copy of the personal data be obtained?</p></li>
+<li><p>How can personal data be transferred to another party?</p></li>
+<li><p>How can information about the personal data be obtained?</p></li>
+</ol>
+<p>The pattern uses the GDPRtEXT<span class="citation" data-cites="pandit_gdprtext_2018"></span> and GDPRov<span class="citation" data-cites="pandit_modelling_2017"></span> ontologies for defining concepts relevant to the GDPR. GDPRov is an ontology for describing the provenance of consent and personal data lifecycles using GDPR relevant terminology, and is an extension of PROV-O and P-Plan. GDPRtEXT provides definitions of concepts and terms used within the text of the GDPR using SKOS.</p>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>time</b></td><td>&lt;http://www.w3.org/2006/time#&gt;</td></tr>
+<tr><td><b>prov</b></td><td>&lt;http://www.w3.org/ns/prov#&gt;</td></tr>
+<tr><td><b>gdprov</b></td><td>&lt;http://purl.org/adaptcentre/openscience/ontologies/gdprov#&gt;</td></tr>
+<tr><td><b>default namespace</b></td><td>&lt;http://openscience.adaptcentre.ie/ontologies/privacypolicy#&gt;</td></tr>
+<tr><td><b>gdprtext</b></td><td>&lt;http://purl.org/adaptcentre/ontologies/GDPRtEXT#&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
